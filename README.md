@@ -64,7 +64,7 @@ Outputs land in `outputs/plots/` and `outputs/reports/metrics.json` automaticall
 ## Key Design Decisions
 
 - **No data leakage:** rolling features use `.shift(1)` before `.rolling()`, so no current-hour value is visible to itself.
-- **No shuffle in split:** time-series data must be split chronologically.
+- **No shuffle in split:** time-series data must be split chronologically .
 - **Lag 168h:** same hour last week captures weekly seasonality without a neural network.
 - **Congestion classifier** maps continuous predictions to Free Flow / Moderate / Heavy Congestion — directly relevant to urban planning.
 
